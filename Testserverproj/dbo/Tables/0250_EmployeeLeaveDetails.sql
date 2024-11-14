@@ -1,0 +1,25 @@
+﻿CREATE TABLE [dbo].[0250_EmployeeLeaveDetails] (
+    [cr968_EmployeeLeaveDetailsId] BIGINT        IDENTITY (1, 1) NOT NULL,
+    [cr968_L_ApprovedOn]           DATE          NULL,
+    [cr968_L_ApproverEmail]        VARCHAR (MAX) NULL,
+    [cr969_L_ApproverName]         VARCHAR (MAX) NULL,
+    [cr968_L_ContractType]         VARCHAR (MAX) NULL,
+    [cr968_L_DutyResumptionDate]   DATE          NULL,
+    [cr968_L_EmployeeId]           VARCHAR (MAX) NULL,
+    [cr968_L_LeaveDays]            INT           NULL,
+    [cr968_L_LeaveEndDate]         DATE          NULL,
+    [cr968_L_LeaveStartDate]       DATE          NULL,
+    [cr968_L_LeaveStatus]          VARCHAR (MAX) NULL,
+    [cr968_L_LeaveType]            VARCHAR (MAX) NULL,
+    [cr968_Name]                   VARCHAR (MAX) NULL,
+    [cr968_L_ReportingPeriod]      VARCHAR (MAX) NULL,
+    [cr968_L_verify]               VARCHAR (MAX) NULL,
+    [CreatedOn]                    DATETIME      CONSTRAINT [DF_0250_EmployeeLeaveDetails_CreatedOn] DEFAULT (getdate()) NULL,
+    [UpdatedOn]                    DATETIME      CONSTRAINT [DF_0250_EmployeeLeaveDetails_UpdatedOn] DEFAULT (getdate()) NULL,
+    [TblRowCount]                  INT           CONSTRAINT [DF_0250_EmployeeLeaveDetails_TblRowCount] DEFAULT ((1)) NULL,
+    [CreatedBy]                    VARCHAR (100) NULL,
+    [UpdatedBy]                    VARCHAR (100) NULL,
+    [IsActive]                     CHAR (1)      CONSTRAINT [DF_0250_EmployeeLeaveDetails_IsActive] DEFAULT ('Y') NULL,
+    CONSTRAINT [PK__0250_Emp__04EA037A340D457A] PRIMARY KEY CLUSTERED ([cr968_EmployeeLeaveDetailsId] ASC)
+);
+
